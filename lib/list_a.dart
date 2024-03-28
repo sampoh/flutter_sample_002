@@ -54,8 +54,10 @@ class DataTableDemoState extends State<DataTableDemo> {
   }
 
   Future<void> _getMoreData(int page) async {
+    var session = Session();
     final dio = await session.getDio();
-    var response = await dio.post('http://192.168.1.199/list.php', data: {
+    var req = '${session.getBaseUrl()}/list.php';
+    var response = await dio.post(req, data: {
       "page": page.toString(),
       "zip": inputValue['zip'],
       "addr": inputValue['addr'],

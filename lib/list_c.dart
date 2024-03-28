@@ -53,7 +53,8 @@ class _PaginatedDataTableProblemState extends State<PaginatedDataTableProblem> {
     print('_currentPage=$_currentPage, _pageSize=$_pageSize');
     var session = Session();
     final dio = await session.getDio();
-    final response = await dio.post('http://192.168.1.199/list.php', data: {
+    var req = '${session.getBaseUrl()}/list.php';
+    final response = await dio.post(req, data: {
       "page": _currentPage.toString(),
       "rowsPerPage": _pageSize.toString(),
       // "rowsPerPage": "100",

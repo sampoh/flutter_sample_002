@@ -146,25 +146,26 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text('LOGIN'),
                     ),
                   ),
-                  const SizedBox(height: 24),
-                  Center(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        debugPrint('TESTING');
-                      },
-                      style: TextButton.styleFrom(
-                        textStyle: const TextStyle(fontSize: 20),
-                        foregroundColor: Colors.white, // foreground
-                        backgroundColor: Colors.blue,
-                        fixedSize: const Size(160, 56),
-                        // alignment: Alignment.topCenter,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                      child: const Text('Register'),
-                    ),
-                  ),
+                  //↓デモ版なので登録ボタンを隠す
+                  // const SizedBox(height: 24),
+                  // Center(
+                  //   child: ElevatedButton(
+                  //     onPressed: () {
+                  //       debugPrint('TESTING');
+                  //     },
+                  //     style: TextButton.styleFrom(
+                  //       textStyle: const TextStyle(fontSize: 20),
+                  //       foregroundColor: Colors.white, // foreground
+                  //       backgroundColor: Colors.blue,
+                  //       fixedSize: const Size(160, 56),
+                  //       // alignment: Alignment.topCenter,
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(10.0),
+                  //       ),
+                  //     ),
+                  //     child: const Text('Register'),
+                  //   ),
+                  // ),
                   const SizedBox(height: 10),
                 ],
               ),

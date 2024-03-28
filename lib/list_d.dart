@@ -81,7 +81,7 @@ class _MyTableViewState extends State<MyTableView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('郵便番号リスト'),
+        title: const Text('郵便番号リスト ( 現状最も汎用性が高いUI )'),
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
@@ -330,7 +330,7 @@ class _MyTableViewState extends State<MyTableView> {
     var session = Session();
     try {
       final dio = await session.getDio();
-      var req = '${session.getBaseHost()}/list.php';
+      var req = '${session.getBaseUrl()}/list.php';
       var response = await dio.post(req, data: {
         "page": _currentPage.toString(),
         "rowsPerPage": _recsPerPage.toString(),

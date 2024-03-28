@@ -55,8 +55,9 @@ class _PaginatedDataTableViewState extends State<PaginatedDataTableView> {
     var session = Session();
     try {
       final dio = await session.getDio();
-      var response = await dio.post('http://192.168.1.199/list.php',
-          data: {"page": _currentPage.toString()});
+      var req = '${session.getBaseUrl()}/list.php';
+      var response =
+          await dio.post(req, data: {"page": _currentPage.toString()});
       if (response.statusCode == 200) {
         final dataList = response.data['list'] as List<dynamic>;
         final List<DataModel> newData =

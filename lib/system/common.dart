@@ -8,12 +8,12 @@ import 'package:intl/intl.dart';
 class Session {
   //サーバ基本情報
   static Map<String, dynamic> info = {
-    // 'protocol': 'https',
-    'protocol': 'http',
-    // 'domain': 'local.rna.co.jp',
-    'domain': '192.168.1.199',
-    // 'directory': 'flutter',
-    'directory': '',
+    'protocol': 'https',
+    // 'protocol': 'http',
+    'domain': 'local.rna.co.jp',
+    // 'domain': '192.168.1.199',
+    'directory': 'flutter_sample',
+    // 'directory': '',
     'api': {
       'session': 'session.php',
       'login': 'login.php',
@@ -21,7 +21,7 @@ class Session {
     },
     'sessionName': 'fltappid',
     'sessionLimit': 6, //limit hours if not remember and no access
-    'userAgent': 'sample-app',
+    'userAgent': 'sample-app', //does not work on web app, only for native apps
     'header': {
       'Client-Version': '0.001a',
       'Client-Uuid': 'f9e894ba-7451-42ed-8106-32127bdc5e76',

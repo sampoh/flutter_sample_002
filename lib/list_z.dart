@@ -95,7 +95,8 @@ class MyDataTableState extends State<MyDataTable> {
     final dio = await session.getDio();
     // ignore: avoid_print
     print('page=$_pageIndex');
-    var response = await dio.post('http://192.168.1.199/list.php', data: {
+    var req = '${session.getBaseUrl()}/list.php';
+    var response = await dio.post(req, data: {
       "page": _pageIndex.toString(),
       "rowsPerPage": _rowsPerPage.toString(),
       "zip": '',
