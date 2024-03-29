@@ -185,7 +185,7 @@ class _MyDetailViewState extends State<MyDetailView> {
     var session = Session();
     try {
       final dio = await session.getDio();
-      var req = '${session.getBaseHost()}/detail.php';
+      var req = '${session.getBaseUrl()}/detail.php';
       var response = await dio.post(req, data: {
         "id": widget.targetId,
       });
