@@ -227,7 +227,7 @@ class _MyDetailViewState extends State<MyDetailView> {
     var session = Session();
     try {
       final dio = await session.getDio();
-      var req = '${session.getBaseHost()}/detailsave.php';
+      var req = '${session.getBaseUrl()}/detailsave.php';
       var response = await dio.post(req,
           data: {"id": widget.targetId, "note": _noteController.text});
       if (response.statusCode == 200) {
